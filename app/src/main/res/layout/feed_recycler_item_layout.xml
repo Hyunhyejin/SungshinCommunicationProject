@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontal_center_guide"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vertical_center_guide"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+    
+    
+    
+    <ImageView
+        android:id="@+id/feed_item_imgv_user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/feed_item_tv_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NICKNAME"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/feed_item_imgv_user"
+        app:layout_constraintTop_toTopOf="@+id/feed_item_imgv_user"
+        app:layout_constraintBottom_toBottomOf="@id/feed_item_imgv_user"
+        app:layout_constraintVertical_bias="0.5"
+
+        />
+    <TextView
+        android:id="@+id/feed_item_tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yyyy/MM/dd HH:mm"
+        android:textSize="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/feed_item_imgv_user"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/feed_item_imgv_contents"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintDimensionRatio="H,16:8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feed_item_imgv_user" />
+
+    <TextView
+        android:id="@+id/feed_item_tv_contents"
+        android:layout_marginTop="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="새가 지혜는 끓는 것은 충분히 그들은 이것이다. 설산에서 청춘 유소년에게서 공자는 끓는 사랑의 굳세게 온갖 이는 것이다. dffddfsfddfss"
+        app:layout_constraintTop_toBottomOf="@+id/feed_item_imgv_contents"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/feed_item_btn_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="졸아요"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/horizontal_center_guide"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/feed_item_tv_contents"
+        />
+
+    <Button
+        android:id="@+id/feed_item_btn_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="댓글"
+        app:layout_constraintLeft_toRightOf="@+id/feed_item_btn_like"
+        app:layout_constraintRight_toLeftOf="@+id/horizontal_center_guide"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/feed_item_tv_contents"
+        />
+
+    <Button
+        android:id="@+id/feed_item_btn_scrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="스크랩"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/horizontal_center_guide"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/feed_item_tv_contents" />
+</android.support.constraint.ConstraintLayout>
